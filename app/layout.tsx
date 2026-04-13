@@ -25,24 +25,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://the-networks-gold.vercel.app"),
+  metadataBase: new URL("https://thenetworkof.network"),
 
-  title: "We Operate the Networks",
+  title: "The Network | Building Connections",
   description:
     "We operate and build high-performance networks to help businesses grow and connect globally.",
 
   openGraph: {
-    title: "We Operate the Networks",
+    title: "The Network | Building Connections",
     description:
       "We operate and build high-performance networks to help businesses grow and connect globally.",
-    url: "https://the-networks-gold.vercel.app",
+    url: "https://thenetworkof.network",
     siteName: "We Operate the Networks",
     images: [
       {
         url: "https://the-networks-gold.vercel.app/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "We Operate the Networks Preview",
+        alt: "The Network | Building Connections",
       },
     ],
     locale: "en_US",
@@ -51,11 +51,11 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "We Operate the Networks",
+    title: "The Network | Building Connections",
     description:
       "We operate and build high-performance networks to help businesses grow and connect globally.",
     images: [
-      "https://the-networks-gold.vercel.app/images/og-image.png",
+      "https://thenetworkof.network/images/og-image.png",
     ],
   },
 };
