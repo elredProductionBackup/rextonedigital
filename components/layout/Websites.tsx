@@ -80,7 +80,7 @@ const CARDS_DATA: CardData[] = [
 const WebsiteCard = ({ card }: { card: CardData }) => {
   return (
     <div
-      className={`relative overflow-hidden h-full p-[40px] rounded-[32px] flex flex-col ${card.alignment} ${card.width}`}
+      className={`relative overflow-hidden h-full p-[40px] rounded-[32px] flex flex-col ${card.alignment}`}
       style={{
         backgroundImage: `linear-gradient(180deg, #131314 0%, rgba(19, 19, 20, 0.4) 50%, rgba(19, 19, 20, 0) 100%), url('${card.bgImage}')`,
         backgroundSize: 'cover',
