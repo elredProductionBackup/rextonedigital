@@ -18,6 +18,10 @@ interface CardData {
   alignment: 'justify-start' | 'justify-end';
   border?: string;
   innerImage?: string;
+  hasArrow?: boolean;
+  logo?: string;
+  logoWidth?: number;
+  logoHeight?: number;
 }
 
 const CARDS_DATA: CardData[] = [
@@ -26,10 +30,10 @@ const CARDS_DATA: CardData[] = [
     bgImage: '/asset/card1bg.png',
     title: [{ text: 'Prive', color: 'text-[#C01823]' }],
     titleSize: 'text-[52px]',
-    description: 'A very private network for UHNI owners & founders, operationally Involved, ambitious, restless & eager to learn. Learn. Solve. Lead',
-    descriptionColor: 'text-[#E4BEBA]',
-    overlayGradient: 'linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(19, 19, 20, 0) 100%)',
-    alignment: 'justify-start',
+    description: 'a private ecosystem for UHNI owners\nand individuals with disproportionate\nfuture impact',
+    overlayGradient: 'linear-gradient(218.56deg, rgba(0, 0, 0, 0.5) 2.02%, rgba(63, 63, 63, 0.5) 29.07%, rgba(222, 222, 222, 0.5) 97.2%)',
+    alignment: 'justify-end',
+    hasArrow: true,
   },
   {
     id: 'csuite',
@@ -40,10 +44,10 @@ const CARDS_DATA: CardData[] = [
     ],
     titleMultiline: true,
     titleSize: 'text-[35px]',
-    description: 'A private network for ambitious professionals who are coming together to learn & solve problems',
-    descriptionColor: 'text-[#E4BEBA]',
-    overlayGradient: 'linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(19, 19, 20, 0) 100%)',
-    alignment: 'justify-start',
+    description: 'A private network for ambitious professionals\nwho are coming together to learn & solve\nproblems',
+    overlayGradient: 'rgba(0, 0, 0, 0.6)',
+    alignment: 'justify-end',
+    hasArrow: true,
   },
   {
     id: 'smart-network',
@@ -54,28 +58,22 @@ const CARDS_DATA: CardData[] = [
     ],
     titleMultiline: true,
     titleSize: 'text-[35px]',
-    description: 'a smart tool built for network leadership and management, it simplifies everything a network requires.',
-    descriptionColor: 'text-[#E4BEBA]',
-    overlayGradient: 'linear-gradient(111.12deg, rgba(0, 0, 0, 0.7) 41.4%, rgba(66, 64, 64, 0.7) 98.48%)',
+    description: 'a smart tool built for network leadership and\nmanagement, it simplifies everything a network requires.',
+    overlayGradient: '',
     alignment: 'justify-start',
     border: '0.5px solid rgba(182, 182, 182, 1)',
     innerImage: '/asset/insideCard3.png',
-    width: 'w-[650px]',
   },
   {
     id: 'thenetwork',
     bgImage: '/asset/thenetworkscard.png',
-    title: [
-      { text: 'the', color: 'text-[#656A6B]' },
-      { text: 'Network', color: 'text-[#C01823]' }
-    ],
-    titleMultiline: false,
-    titleSize: 'text-[35px]',
+    logo: '/asset/theNetwork.svg',
+    logoWidth: 180,
+    logoHeight: 26,
     description: 'A Collaboration platform for Network members.',
-    descriptionColor: 'text-[#E4BEBA]',
     overlayGradient: 'linear-gradient(111.12deg, rgba(0, 0, 0, 0.7) 41.4%, rgba(66, 64, 64, 0.7) 98.48%)',
-    alignment: 'justify-end',
-    width: 'w-[400px]',
+    alignment: 'justify-start',
+    title: []
   }
 ];
 
@@ -95,30 +93,54 @@ const WebsiteCard = ({ card }: { card: CardData }) => {
         style={{ background: card.overlayGradient }}
       />
 
-      <div className="relative z-10 flex flex-col gap-[16px] h-full">
-        <div className="flex flex-col gap-[16px]">
-          <h2 className={`font-extrabold leading-[110%] tracking-[-0.46px] font-['Mencken_Std'] ${card.titleSize || 'text-[35px]'}`}>
-            {card.title.map((part, index) => (
-              <React.Fragment key={index}>
-                <span className={part.color}>{part.text}</span>
-                {card.titleMultiline && index < card.title.length - 1 && <br />}
-              </React.Fragment>
-            ))}
-          </h2>
+      {card.hasArrow && (
+        <div className="absolute top-[30px] right-[30px] z-20 w-[36px] h-[36px] rounded-full bg-white/30 backdrop-blur-sm flex items-center justify-center">
+          <Image 
+            src="/asset/arrow.svg"
+            alt="Link Arrow"
+            width={14}
+            height={14}
+            className="object-contain"
+          />
+        </div>
+      )}
 
-          <p className={`font-inter text-[16px] leading-[1.6] ${card.descriptionColor || 'text-[#E4BEBA]'}`}>
+      <div className={`relative z-10 flex flex-col gap-[16px] h-full ${card.alignment}`}>
+        <div className="flex flex-col gap-[16px]">
+          {card.logo ? (
+            <div className="relative h-[30px] w-fit">
+              <Image 
+                src={card.logo}
+                alt="Card Logo"
+                width={card.logoWidth || 180}
+                height={card.logoHeight || 30}
+                className="object-contain object-left"
+              />
+            </div>
+          ) : (
+            <h2 className={`font-extrabold leading-[110%] tracking-[-0.46px] font-['Mencken_Std'] ${card.titleSize || 'text-[35px]'}`}>
+              {card.title.map((part, index) => (
+                <React.Fragment key={index}>
+                  <span className={part.color}>{part.text}</span>
+                  {card.titleMultiline && index < card.title.length - 1 && <br />}
+                </React.Fragment>
+              ))}
+            </h2>
+          )}
+
+          <p className={`font-inter font-semibold text-[24px] leading-[1.2] tracking-[-1.46px] whitespace-pre-line ${card.descriptionColor || 'text-white'}`}>
             {card.description}
           </p>
         </div>
 
         {card.innerImage && (
-          <div className="mt-auto pt-8 flex justify-center">
-            <div className="relative w-full aspect-[4/3]">
-              <Image 
+          <div className="mt-[20px] flex-1 relative min-h-[392px] h-[551px]">
+            <div className="absolute inset-0 rounded-[11px] overflow-hidden">
+              <Image
                 src={card.innerImage}
                 alt="Card Internal Content"
                 fill
-                className="object-contain object-bottom"
+                className="object-cover object-top -translate-y-[50px]"
               />
             </div>
           </div>
@@ -134,7 +156,7 @@ const Websites = () => {
 
   return (
     <section className="relative w-full pt-0 pb-[100px] px-[32px] overflow-hidden border">
-      
+
       {/* Background */}
       {/* <div 
         className="absolute inset-0 z-0 opacity-40 pointer-events-none"
@@ -162,25 +184,26 @@ const Websites = () => {
           </p>
         </div>
 
-        {/* 🔥 TOP ROW (1.5 / 1) */}
-        <div className="grid grid-cols-[1.5fr_1fr] gap-[24px] h-[624px]">
+        {/* 🔥 TOP ROW (2/5 / 3/5) */}
+        <div className="grid grid-cols-[4fr_5fr] gap-[30px] h-[460px]">
           {upperCards.map(card => (
             <WebsiteCard key={card.id} card={card} />
           ))}
         </div>
 
         {/* 🔥 BOTTOM ROW (1 / 1) */}
-        <div className="grid grid-cols-2 gap-[24px] h-[624px]">
+        <div className="grid grid-cols-[5fr_4fr] gap-[24px] h-[550px]">
           {lowerCards.map(card => (
             <WebsiteCard key={card.id} card={card} />
           ))}
         </div>
-        <div 
+        <div
           className="w-full h-[310px] mx-auto rounded-[30px] relative overflow-hidden flex flex-col items-center justify-center text-center group"
           style={{
             backgroundImage: "url('/asset/card5bg.png')",
             backgroundSize: 'cover',
-            backgroundPosition: 'center'
+            backgroundPosition: 'center',
+
           }}
         >
           <div className="absolute inset-0 bg-black/60" />

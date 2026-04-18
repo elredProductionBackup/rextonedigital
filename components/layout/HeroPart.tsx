@@ -13,7 +13,7 @@ const HeroPart = () => {
       {/* HERO CONTENT */}
       <div className="relative z-[3] h-[900px] flex flex-col items-center justify-center text-center">
         <h1 className="font-newsreader text-zinc-900 selection:bg-indigo-500/30">
-          <span className="block text-[64px] md:text-[193px] font-light leading-[1.1] tracking-[-0.03em] animate-fade-in-up font-['Liberation_Serif']">
+          <span className="block text-[64px] md:text-[193px] font-light leading-[1.1] tracking-[-0.03em] animate-fade-in-up font-['Mencken_Std']">
             We Operate
           </span>
 

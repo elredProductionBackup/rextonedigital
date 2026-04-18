@@ -8,10 +8,10 @@ const Hero = () => {
       {/* Hero Content */}
       <div className="relative z-10 text-center px-4">
         <h1 className="font-newsreader text-zinc-900 selection:bg-indigo-500/30">
-          <span className="block text-[64px] md:text-[193px] font-light leading-[1.1] tracking-[-0.03em] animate-fade-in-up font-['Liberation_Serif']">
+          <span className="block text-[160px] font-normal leading-[193px] tracking-normal font-['Mencken_Std']">
             We Operate
           </span>
-          <span className="block text-[160px] font-extrabold text-[#C01823] leading-none tracking-normal mt-2 animate-fade-in-up delay-100 font-['Mencken_Std']">
+          <span className="block text-[160px] font-extrabold text-[#C01823] leading-none tracking-normal mt-2 font-['Mencken_Std']">
             Networks
           </span>
         </h1>

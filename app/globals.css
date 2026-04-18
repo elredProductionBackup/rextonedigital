@@ -14,6 +14,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Mencken Std';
+  src: url('/asset/fonts/fonnts.com-Mencken-Std-.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
 
 @font-face {
   font-family: 'Liberation Serif';
