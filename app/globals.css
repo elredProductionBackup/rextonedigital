@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* 800 */
 @font-face {
   font-family: 'Mencken Std';
   src: url('/asset/fonts/fonnts.com-Mencken-Std-Extra-Bold.otf') format('opentype');
@@ -7,6 +8,7 @@
   font-style: normal;
 }
 
+/* 400 (REGULAR - this is your main one) */
 @font-face {
   font-family: 'Mencken Std';
   src: url('/asset/fonts/fonnts.com-Mencken-Std-Head-Narrow-.otf') format('opentype');
@@ -14,6 +16,7 @@
   font-style: normal;
 }
 
+/* 300 */
 @font-face {
   font-family: 'Mencken Std';
   src: url('/asset/fonts/fonnts.com-Mencken-Std-.otf') format('opentype');
@@ -21,14 +24,10 @@
   font-style: normal;
 }
 
-
-@font-face {
-  font-family: 'Liberation Serif';
-  src: url('/asset/fonts/LiberationSerif-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+/* Tailwind theme */
+@theme {
+  --font-mencken: 'Mencken Std', serif;
 }
-
 :root {
 
   --background: #ffffff;
