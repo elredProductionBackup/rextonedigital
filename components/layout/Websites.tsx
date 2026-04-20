@@ -29,30 +29,37 @@ const CARDS_DATA: CardData[] = [
   {
     id: 'prive',
     bgImage: '/asset/card1bg.png',
+    logo: '/asset/logo/prive.svg',
     title: [{ text: 'Privé', color: 'text-[#C01823]' }],
     titleSize: 'text-[52px]',
-    description: 'a private ecosystem for UHNI owners\n and individuals with disproportionate\n future impact',
+    description: 'a private ecosystem for UHNI owners and individuals with disproportionate future impact',
     overlayGradient: 'linear-gradient(218.56deg, rgba(0, 0, 0, 0.5) 2.02%, rgba(63, 63, 63, 0.5) 29.07%, rgba(222, 222, 222, 0.5) 97.2%)',
     alignment: 'justify-end',
     hasArrow: true,
+    logoWidth: 126,
+    logoHeight: 40,
   },
   {
     id: 'csuite',
     bgImage: '/asset/card2bg.png',
+    logo: '/asset/logo/csuite.svg',
     title: [
       { text: 'CSuite', color: 'text-[#C01823]' },
       { text: 'Network', color: 'text-[#656A6B]' }
     ],
     titleMultiline: true,
     titleSize: 'text-[35px]',
-    description: 'a network for ambitious professionals\n who are coming together to learn & solve\n problems',
+    description: 'a network for ambitious professionals who are coming together to learn & solve problems',
     overlayGradient: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6))',
     alignment: 'justify-end',
     hasArrow: true,
+    logoWidth: 144,
+    logoHeight: 60,
   },
   {
     id: 'smart-network',
     bgImage: '/asset/card3bg.png',
+    logo: '/asset/logo/smart-networks.svg',
     title: [
       { text: 'Smart', color: 'text-[#C01823]' },
       { text: 'Networks', color: 'text-[#656A6B]' }
@@ -63,14 +70,16 @@ const CARDS_DATA: CardData[] = [
     overlayGradient: 'linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5))',
     alignment: 'justify-start',
     border: '0.5px solid rgba(182, 182, 182, 1)',
-    innerImage: '/asset/insideCard3.png',
+    innerImage: '/images/smart-networks.png',
+    logoWidth: 160,
+    logoHeight: 63,
   },
   {
     id: 'thenetwork',
     bgImage: '/asset/thenetworkscard.png',
     logo: '/asset/theNetwork.svg',
-    logoWidth: 180,
-    logoHeight: 26,
+    logoWidth: 220,
+    logoHeight: 31,
     description: 'an app for network members',
     overlayGradient: 'linear-gradient(111.12deg, rgba(0, 0, 0, 0.7) 41.4%, rgba(66, 64, 64, 0.7) 98.48%)',
     alignment: 'justify-start',
@@ -87,8 +96,7 @@ const WebsiteCard = ({
 }) => {
 
   return (
-    <div
-      className={`relative overflow-hidden max-w-[1080px] h-full p-[40px] rounded-[32px] flex flex-col ${card.alignment} cursor-pointer`}
+<div className={`relative overflow-hidden max-w-[1080px] h-[360px] md:h-full p-[20px] md:p-[40px] rounded-[32px] flex flex-col ${card.alignment} cursor-pointer max-h-[550px]`}
       style={{
         backgroundImage: `${card.overlayGradient ? `${card.overlayGradient},` : ''
           } url('${card.bgImage}')`,
@@ -114,10 +122,10 @@ const WebsiteCard = ({
         </div>
       )}
 
-      <div className={`relative z-10 flex flex-col gap-[16px] h-full ${card.alignment}`}>
+      <div className={`relative z-10 flex flex-col gap-[20px] h-full ${card.alignment}`}>
         <div className="flex flex-col gap-[16px]">
           {card.logo ? (
-            <div className="relative h-[30px] w-fit">
+            <div className="relative  w-fit">
               <Image
                 src={card.logo}
                 alt="Card Logo"
@@ -137,7 +145,7 @@ const WebsiteCard = ({
             </h2>
           )}
 
-          <p className={`font-inter font-[600] text-[24px] leading-[1.2] tracking-[-1.46px] whitespace-pre-line ${card.descriptionColor || 'text-white'}`}>
+          <p className={`font-inter font-[600] text-[16px] md:text-[24px] leading-[1.4] md:leading-[1.2] tracking-[-0.5px] md:tracking-[-1.46px] whitespace-pre-line ${card.descriptionColor || 'text-white'}`}>
             {card.description}
           </p>
         </div>
@@ -150,7 +158,7 @@ const WebsiteCard = ({
                 src={card.innerImage}
                 alt="Card Internal Content"
                 fill
-                className="object-cover object-top -translate-y-[50px]"
+                className="object-contain object-top -translate-y-[5px]"
               />
 
               {/* ✅ Linear gradient overlay */}
@@ -179,7 +187,7 @@ const Websites = () => {
     }
   };
   return (
-    <section className="relative w-full pt-0 pb-[100px] px-[32px] overflow-hidden">
+    <section className="relative w-full pt-0 pb-[100px] px-[20px] overflow-hidden">
 
       {/* Background */}
       {/* <div 
@@ -190,39 +198,35 @@ const Websites = () => {
       /> */}
 
       <div className="max-w-[1536px] mx-auto w-full flex flex-col gap-[24px] relative z-10">
-<div className="h-[496px] w-[1080px] mx-auto flex flex-col justify-center gap-6 text-[#333333] font-inter mb-16 text-center">
-  
-  <p className="text-[22px] font-medium leading-[1.4]">
-    There are thousands of networks today; social, professional, charitable, and more. Yet most underutilise their greatest asset:
-    <span className="font-extrabold italic"> the intelligence and lived experience of their own members.</span>
-  </p>
+        <div className="content-block w-full md:w-[1080px]  md:px-0 mx-auto flex flex-col justify-center gap-6 text-[#333333] font-inter mb-16 text-center">
 
-  <p className="text-[22px] font-medium leading-[1.4]">
-    While many networks focus heavily on events and programming, few systematically unlock the
-    <span className="font-extrabold italic"> compounding value that exists within the membership itself.</span>
-  </p>
+          <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
+            There are thousands of networks today; social, professional, charitable, and more. Yet most underutilise their greatest asset:
+            <span className="font-extrabold italic"> the intelligence and lived experience of their own members.</span>
+          </p>
 
-  <p className="text-[22px] font-medium leading-[1.4]">
-    Our belief is simple:
-    <span className="font-extrabold italic"> The future of high value networks lies not in more activity, but in deeper, more intelligent member-to-member value creation.</span>
-  </p>
+          <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
+            While many networks focus heavily on events and programming, few systematically unlock the
+            <span className="font-extrabold italic"> compounding value that exists within the membership itself.</span>
+          </p>
 
-  <p className="text-[22px] font-medium leading-[1.4]">
-    We are building the world’s most intelligent learning and collaboration ecosystem, one where insight, experience, and access are intentionally activated so that
-    <span className="font-extrabold italic"> member intelligence compounds over time.</span>
-  </p>
+          <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
+            Our belief is simple:
+            <span className="font-extrabold italic"> The future of high value networks lies not in more activity, but in deeper, more intelligent member-to-member value creation.</span>
+          </p>
 
-  <p className="text-[22px] font-medium leading-[1.4]">
-    Our approach focuses on carefully curated networks, each designed to deliver unique value to its members and, critically, to each other through structured initiatives, high trust interactions, and thoughtfully deployed AI tools.
-  </p>
+          <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
+            We are building the world’s most intelligent learning and collaboration ecosystem, one where insight, experience, and access are intentionally activated so that
+            <span className="font-extrabold italic"> member intelligence compounds over time.</span>
+          </p>
 
-</div>
+          <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
+            Our approach focuses on carefully curated networks, each designed to deliver unique value to its members and, critically, to each other through structured initiatives, high trust interactions, and thoughtfully deployed AI tools.
+          </p>
 
+        </div>
         {/* 🔥 TOP ROW (2/5 / 3/5) */}
-        <div className="grid grid-cols-[4fr_5fr] gap-[30px] h-[460px]">
-          {/* {upperCards.map(card => (
-            <WebsiteCard key={card.id} card={card} />
-          ))} */}
+        {/* <div className="grid grid-cols-[4fr_5fr] gap-[30px] h-[460px]">
           {upperCards.map(card => (
             <WebsiteCard
               key={card.id}
@@ -230,18 +234,27 @@ const Websites = () => {
               onClick={handleCardClick}
             />
           ))}
-        </div>
+        </div> */}
+<div className="grid grid-cols-1 md:grid-cols-[4fr_5fr] gap-[30px] min-h-[360px] md:min-h-[460px]">
+  {upperCards.map(card => (
+    <WebsiteCard
+      key={card.id}
+      card={card}
+      onClick={handleCardClick}
+    />
+  ))}
+</div>
 
-        {/* 🔥 BOTTOM ROW (1 / 1) */}
-        <div className="grid grid-cols-[5fr_4fr] gap-[24px] h-[550px]">
-          {lowerCards.map(card => (
-            <WebsiteCard
-              key={card.id}
-              card={card}
-              onClick={handleCardClick}
-            />
-          ))}
-        </div>
+<div className="grid grid-cols-1 md:grid-cols-[5fr_4fr] gap-[24px] min-h-[360px] md:min-h-[550px] ">
+  {lowerCards.map(card => (
+    <WebsiteCard
+      key={card.id}
+      card={card}
+      onClick={handleCardClick}
+    />
+  ))}
+</div>
+
         <div
           className="w-full h-[310px] mx-auto rounded-[30px] relative overflow-hidden flex flex-col items-center justify-center text-center group"
           style={{
@@ -258,7 +271,7 @@ const Websites = () => {
                 <span className="text-[#656A6B] block">Smart</span>
                 <span className="text-[#C01823] block">Services</span>
               </h2>
-              <p className="text-white font-inter text-[24px] font-semibold leading-[120%] tracking-[-1.46px]">
+              <p className="text-white font-inter text-[16px] md:text-[24px] font-semibold leading-[140%] md:leading-[120%] tracking-[-0.5px] md:tracking-[-1.46px]">
                 backend team to support networks
               </p>
             </div>

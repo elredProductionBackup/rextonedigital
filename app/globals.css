@@ -72,9 +72,9 @@ display: none;
 
 @media (max-width:1200px) {
   .remove-mobile-screen{
-    display: none;
+    /* display: none; */
   }
   .mobile-screen{
-    display: flex;
+    /* display: flex; */
   }
 }

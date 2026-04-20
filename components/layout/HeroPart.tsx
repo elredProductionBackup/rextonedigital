@@ -1,7 +1,8 @@
+import Image from "next/image";
 const HeroPart = () => {
   return (
     <section
-      className="relative h-[100vh] min-h-[700px] max-h-[900px] w-full flex justify-center items-center"
+      className="hero-section relative h-[100vh] min-h-[700px] max-h-[900px] w-full flex justify-center items-center"
     >
       {/* RADIAL GRADIENT */}
       <div
@@ -15,16 +16,22 @@ const HeroPart = () => {
         }}
       />
 
-       {/* HERO CONTENT */}
-       <div className="relative flex flex-col items-center justify-center text-center ">
-           <span className="block text-[64px] md:text-[193px] font-light leading-[1.1] tracking-[0] animate-fade-in-up font-mencken-regular">
-             We Operate
-           </span>
+      {/* HERO CONTENT */}
+      <div className="relative flex flex-col items-center justify-center text-center ">
+        <span className="hero-title block text-[64px] md:text-[193px] font-light leading-[1.1] tracking-[0] animate-fade-in-up font-mencken-regular">
+          We Operate
+        </span>
 
-           <span className="text-[160px] text-[#C01823] leading-[100%] tracking-[0px] mt-[20px] font-mencken-extrabold">
-             Networks
-           </span>
-       </div>
+        <span className="text-[160px] text-[#C01823] leading-[100%] tracking-[0px] mt-[12px] sm:mt-[60px] font-mencken-extrabold w-[90%]">
+          <Image
+            src={'/asset/logo/networks.svg'}
+            alt="Networks"
+            width={500}
+            height={500}
+            className="networks-img h-[100%] w-[100%] object-contain"
+          />
+        </span>
+      </div>
 
     </section>
   );

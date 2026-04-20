@@ -1,0 +1,29 @@
+/* hero section */
+@media (max-width: 600px) {
+
+  /* Hero height */
+  .hero-section {
+    height: 364px;
+    min-height: unset;
+    max-height: unset;
+    padding-top: 64px;
+  }
+
+  /* Title font */
+  .hero-title {
+    font-size: 50px !important;
+  }
+
+  /* Image fix */
+  .networks-img {
+    width: 230px !important;
+    height: 40px !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+}
+
+
+/* content section */
