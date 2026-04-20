@@ -29,7 +29,7 @@ const CARDS_DATA: CardData[] = [
   {
     id: 'prive',
     bgImage: '/asset/card1bg.png',
-    title: [{ text: 'Prive', color: 'text-[#C01823]' }],
+    title: [{ text: 'Privé', color: 'text-[#C01823]' }],
     titleSize: 'text-[52px]',
     description: 'a private ecosystem for UHNI owners\n and individuals with disproportionate\n future impact',
     overlayGradient: 'linear-gradient(218.56deg, rgba(0, 0, 0, 0.5) 2.02%, rgba(63, 63, 63, 0.5) 29.07%, rgba(222, 222, 222, 0.5) 97.2%)',
