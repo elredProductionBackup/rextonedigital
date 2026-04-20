@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutHero() {
     return (
-        <section className="bg-[#f2f2f2] px-2.5 py-[80px] md:py-[120px] lg:py-[140px]">
+        <section className="bg-[#f2f2f2] px-2.5 py-[60px] ">
             {/* Grid: Mobile me 1 column, Desktop me 2 columns */}
             <div className="mx-0 md:mx-[70px] grid grid-cols-1 md:grid-cols-[470px_1fr] gap-10 md:gap-16 items-center">
 

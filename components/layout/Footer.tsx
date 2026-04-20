@@ -18,9 +18,15 @@ const Footer = () => {
     </Link>
 
     <div className="flex items-center gap-6 md:gap-12 text-[#333333] font-inter font-medium text-[10px] md:text-[20px]">
-      <a href="/why" className="hover:text-[#C01823] transition-colors">Why</a>
-      <a href="/contact" className="hover:text-[#C01823] transition-colors">Contact</a>
-    </div>
+  <a href="/why" className="hover:text-[#C01823] transition-colors">Why</a>
+
+  <a 
+    href="mailto:info@rextonedigital.com" 
+    className="hover:text-[#C01823] transition-colors"
+  >
+    Contact
+  </a>
+</div>
 
   </div>
 

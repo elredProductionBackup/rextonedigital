@@ -58,12 +58,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link
-              href="/contact"
-              className="font-inter text-[20px] text-[#515151] hover:font-semibold hover:text-[#C01522] transition-all duration-300"
-            >
-              Contact
-            </Link>
+           <a
+            href="mailto:info@rextonedigital.com"
+            className="font-inter text-[20px] text-[#515151] hover:font-semibold hover:text-[#C01522] transition-all duration-300"
+          >
+            Contact
+          </a>
           </li>
         </ul>
 
@@ -111,13 +111,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link
-              href="/contact"
-              onClick={() => setIsOpen(false)}
-              className="text-[20px] text-[#333]"
+            <a href="mailto:info@rextonedigital.com"
+              className="font-inter text-[20px] text-[#515151] hover:font-semibold hover:text-[#C01522] transition-all duration-300"
             >
               Contact
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

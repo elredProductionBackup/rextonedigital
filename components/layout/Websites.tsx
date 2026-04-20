@@ -96,7 +96,7 @@ const WebsiteCard = ({
 }) => {
 
   return (
-<div className={`relative overflow-hidden max-w-[1080px] h-[360px] md:h-full p-[20px] md:p-[40px] rounded-[32px] flex flex-col ${card.alignment} cursor-pointer max-h-[550px]`}
+    <div className={`relative overflow-hidden max-w-[1080px] h-[360px] md:h-full p-[20px] md:p-[40px] rounded-[32px] flex flex-col ${card.alignment} cursor-pointer max-h-[550px]`}
       style={{
         backgroundImage: `${card.overlayGradient ? `${card.overlayGradient},` : ''
           } url('${card.bgImage}')`,
@@ -176,6 +176,7 @@ const Websites = () => {
   const upperCards = CARDS_DATA.slice(0, 2);
   const lowerCards = CARDS_DATA.slice(2, 4);
   const [showPopup, setShowPopup] = useState(false);
+  const [showSmartPopup, setShowSmartPopup] = useState(false);
 
   const handleCardClick = (id: string) => {
     if (id === "prive") {
@@ -235,34 +236,34 @@ const Websites = () => {
             />
           ))}
         </div> */}
-<div className="grid grid-cols-1 md:grid-cols-[4fr_5fr] gap-[30px] min-h-[360px] md:min-h-[460px]">
-  {upperCards.map(card => (
-    <WebsiteCard
-      key={card.id}
-      card={card}
-      onClick={handleCardClick}
-    />
-  ))}
-</div>
+        <div className="grid grid-cols-1 md:grid-cols-[4fr_5fr] gap-[30px] min-h-[360px] md:min-h-[460px]">
+          {upperCards.map(card => (
+            <WebsiteCard
+              key={card.id}
+              card={card}
+              onClick={handleCardClick}
+            />
+          ))}
+        </div>
 
-<div className="grid grid-cols-1 md:grid-cols-[5fr_4fr] gap-[24px] min-h-[360px] md:min-h-[550px] ">
-  {lowerCards.map(card => (
-    <WebsiteCard
-      key={card.id}
-      card={card}
-      onClick={handleCardClick}
-    />
-  ))}
-</div>
+        <div className="grid grid-cols-1 md:grid-cols-[5fr_4fr] gap-[24px] min-h-[360px] md:min-h-[550px] ">
+          {lowerCards.map(card => (
+            <WebsiteCard
+              key={card.id}
+              card={card}
+              onClick={handleCardClick}
+            />
+          ))}
+        </div>
 
         <div
-          className="w-full h-[310px] mx-auto rounded-[30px] relative overflow-hidden flex flex-col items-center justify-center text-center group"
+          className="w-full h-[310px] mx-auto rounded-[30px] relative overflow-hidden flex flex-col items-center justify-center text-center group cursor-pointer"
           style={{
             backgroundImage: "url('/asset/card5bg.png')",
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-
           }}
+            onClick={() => setShowSmartPopup(true)}
         >
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-10 w-full max-w-[1080px] flex flex-col items-center justify-center">
@@ -297,6 +298,24 @@ const Websites = () => {
           </div>
         </div>
       )}
+      {showSmartPopup && (
+  <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
+    <div className="bg-white rounded-2xl p-8 max-w-sm text-center shadow-xl">
+      <h2 className="text-lg font-semibold mb-2 text-black">
+        Smart Services – Coming Soon
+      </h2>
+      <p className="text-sm text-gray-600 mb-4">
+        We're building something powerful to support networks behind the scenes. Stay tuned.
+      </p>
+      <button
+        onClick={() => setShowSmartPopup(false)}
+        className="px-4 py-2 bg-black text-white rounded-md cursor-pointer"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
     </section>
   );
 };
