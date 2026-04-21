@@ -18,24 +18,24 @@ const inter = Inter({
   variable: "--font-inter",
 });
 export const metadata: Metadata = {
-  metadataBase: new URL("https://thenetworkof.network"),
+  metadataBase: new URL("https://www.rextonedigital.com"),
 
-  title: "The Network | Building Connections",
+  title: "The Network",
   description:
-    "We operate and build high-performance networks to help businesses grow and connect globally.",
+    "We are building the world’s most intelligent learning and collaboration ecosystem",
 
   openGraph: {
-    title: "The Network | Building Connections",
+    title: "The Network",
     description:
-      "We operate and build high-performance networks to help businesses grow and connect globally.",
-    url: "https://thenetworkof.network",
+      "We are building the world’s most intelligent learning and collaboration ecosystem",
+    url: "https://www.rextonedigital.com",
     siteName: "We Operate the Networks",
     images: [
       {
-        url: "https://the-networks-gold.vercel.app/images/og-image.png",
+        url: "https://www.rextonedigital.com/images/og-meta.webp",
         width: 1200,
         height: 630,
-        alt: "The Network | Building Connections",
+        alt: "The Network",
       },
     ],
     locale: "en_US",
@@ -44,11 +44,11 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "The Network | Building Connections",
+    title: "The Network",
     description:
-      "We operate and build high-performance networks to help businesses grow and connect globally.",
+      "We are building the world’s most intelligent learning and collaboration ecosystem",
     images: [
-      "https://thenetworkof.network/images/og-image.webp",
+      "https://www.rextonedigital.com/images/og-image.webp",
     ],
   },
 };
