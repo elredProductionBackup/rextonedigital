@@ -80,7 +80,7 @@ const CARDS_DATA: CardData[] = [
     logo: '/asset/theNetwork.svg',
     logoWidth: 220,
     logoHeight: 31,
-    description: 'an app for network members',
+    description: 'an app for all network members',
     overlayGradient: 'linear-gradient(111.12deg, rgba(0, 0, 0, 0.7) 41.4%, rgba(66, 64, 64, 0.7) 98.48%)',
     alignment: 'justify-start',
     title: []
@@ -145,7 +145,7 @@ const WebsiteCard = ({
             </h2>
           )}
 
-          <p className={`font-inter font-[600] text-[16px] md:text-[24px] leading-[1.4] md:leading-[1.2] tracking-[-0.5px] md:tracking-[-1.46px] whitespace-pre-line ${card.descriptionColor || 'text-white'}`}>
+          <p className={`font-inter font-[600] text-[16px] md:text-[24px] leading-[1.4] md:leading-[1.2] tracking-[-0.5px] md:tracking-[-1.46px] whitespace-pre-line ${card.descriptionColor || 'text-white'} ${card?.id === "prive" ? "w-full md:w-[65%]" : ""}`}>
             {card.description}
           </p>
         </div>
@@ -202,12 +202,12 @@ const Websites = () => {
         <div className="content-block w-full md:w-[1080px]  md:px-0 mx-auto flex flex-col justify-center gap-6 text-[#333333] font-inter mb-16 text-center">
 
           <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
-            There are thousands of networks today; social, professional, charitable, and more. Yet most underutilise their greatest asset:
-            <span className="font-extrabold italic"> the intelligence and lived experience of their own members.</span>
+            There are thousands of networks today; social, professional, charitable, and more. <br/>
+            Yet most underutilise their greatest asset: <span className="font-extrabold italic"> the intelligence and lived experience of their own members.</span>
           </p>
 
           <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
-            While many networks focus heavily on events and programming, few systematically unlock the
+            While many networks focus heavily on events and programming, only few systematically unlock the
             <span className="font-extrabold italic"> compounding value that exists within the membership itself.</span>
           </p>
 
@@ -217,12 +217,12 @@ const Websites = () => {
           </p>
 
           <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
-            We are building the world’s most intelligent learning and collaboration ecosystem, one where insight, experience, and access are intentionally activated so that
+            We are building the world’s most intelligent learning and collaboration ecosystem, one where insight, experience and access are intentionally activated so that
             <span className="font-extrabold italic"> member intelligence compounds over time.</span>
           </p>
 
           <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
-            Our approach focuses on carefully curated networks, each designed to deliver unique value to its members and, critically, to each other through structured initiatives, high trust interactions, and thoughtfully deployed AI tools.
+            Our approach focuses on carefully curated networks, each designed to deliver unique value to its members and critically, to each other through structured initiatives, high trust interactions, and thoughtfully deployed AI tools.
           </p>
 
         </div>
@@ -236,7 +236,7 @@ const Websites = () => {
             />
           ))}
         </div> */}
-        <div className="grid grid-cols-1 md:grid-cols-[4fr_5fr] gap-[30px] min-h-[360px] md:min-h-[460px]">
+        <div className="grid grid-cols-1 md:grid-cols-[5fr_4fr] gap-[30px] min-h-[360px] md:min-h-[460px]">
           {upperCards.map(card => (
             <WebsiteCard
               key={card.id}
@@ -246,7 +246,7 @@ const Websites = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[5fr_4fr] gap-[24px] min-h-[360px] md:min-h-[550px] ">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-[24px] min-h-[360px] md:min-h-[550px] ">
           {lowerCards.map(card => (
             <WebsiteCard
               key={card.id}
@@ -272,8 +272,8 @@ const Websites = () => {
                 <span className="text-[#656A6B] block">Smart</span>
                 <span className="text-[#C01823] block">Services</span>
               </h2>
-              <p className="text-white font-inter text-[16px] md:text-[24px] font-semibold leading-[140%] md:leading-[120%] tracking-[-0.5px] md:tracking-[-1.46px]">
-                backend team to support networks
+              <p className="text-white font-inter text-[16px] md:text-[24px] font-semibold leading-[140%] md:leading-[120%] tracking-[-0.5px] md:tracking-[-1.46px] text-center">
+                a dedicated backend team to support networks
               </p>
             </div>
           </div>

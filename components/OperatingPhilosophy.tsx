@@ -12,7 +12,7 @@ const OperatingPhilosophy = () => {
         {/* ROW 1 */}
         <div className="grid grid-cols-2 md:grid-cols-[430px_650px] gap-2 md:gap-16 items-start">
           <p className="text-[#3A3A3A] font-inter font-semibold text-[14px] md:text-[30px]">
-            Ecosystem over individual
+            Ecosystem over individualism
           </p>
 
           <div className="space-y-4 font-inter text-[13px] md:text-[28px] leading-[150%] text-[#4A4A4A]">
@@ -46,8 +46,7 @@ const OperatingPhilosophy = () => {
               {/* Borrowing from the quote :{" "} */}
               <span className="italic">Scale determines seriousness.</span>
             </p>
-            <p>
-              The network operates on the belief that{" "}
+            <p>The network operates on the belief that{" "}
               <span className="font-semibold text-black">
                 ambition is only credible when it can compound
               </span>{" "}
@@ -83,7 +82,7 @@ const OperatingPhilosophy = () => {
               </span>
             </p>
             <p>
-              Curiosity, speed, and execution are cultural currencies.
+              Curiosity, speed and execution are cultural currencies.
             </p>
           </div>
         </div>
