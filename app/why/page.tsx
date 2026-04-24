@@ -4,7 +4,7 @@ import SummaryPlatforms from "@/components/SummaryPlatforms"
 
 const Why = () => {
   return (
-    <div className="flex flex-col flex-1 overflow-x-hidden bg-white pt-[90px]">
+    <div className="flex flex-col flex-1 overflow-x-hidden bg-white pt-[64px] md:pt-[90px]">
       <AboutHero/>
       <SummaryPlatforms/>
       {/* <FounderMessage/> */}

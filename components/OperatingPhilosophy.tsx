@@ -22,7 +22,7 @@ const OperatingPhilosophy = () => {
               <span className="font-semibold text-black">
                 building interconnected systems
               </span>
-              : talent, capital, supply chains, technology, and influence that
+              : talent, capital, supply chains, technology and influence that
               reinforce each other.
             </p>
             <p>
@@ -50,12 +50,12 @@ const OperatingPhilosophy = () => {
               <span className="font-semibold text-black">
                 ambition is only credible when it can compound
               </span>{" "}
-              across markets, sectors, and borders.
+              across markets, sectors and borders.
             </p>
             <p>
               Ideas are interrogated not for novelty but for{" "}
               <span className="font-semibold text-black">
-                capacity to scale, sustain, and dominate
+                capacity to scale, sustain and dominate
               </span>
               .
             </p>

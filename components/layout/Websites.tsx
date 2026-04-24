@@ -188,7 +188,7 @@ const Websites = () => {
     }
   };
   return (
-    <section className="relative w-full pt-0 pb-[100px] px-[20px] overflow-hidden">
+    <section className="relative w-full pt-0 pb-[100px] px-[20px] overflow-hidden flex flex-col items-center">
 
       {/* Background */}
       {/* <div 
@@ -198,31 +198,31 @@ const Websites = () => {
         }}
       /> */}
 
-      <div className="max-w-[1536px] mx-auto w-full flex flex-col gap-[24px] relative z-10">
-        <div className="content-block w-full md:w-[1080px]  md:px-0 mx-auto flex flex-col justify-center gap-6 text-[#333333] font-inter mb-16 text-center">
+      <div className=" w-full flex flex-col items-center gap-[20px] relative z-10">
+        <div className=" w-[100%] max-w-[1200px] flex flex-col justify-center gap-6 text-[#333333] font-inter mb-16 text-center flex-wrap">
 
-          <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
-            There are thousands of networks today; social, professional, charitable, and more. <br/>
+          <p className="w-[100%] text-[14px] md:text-[22px] font-medium leading-[1.4]">
+            There are thousands of networks today; social, professional, charitable and more. <br/>
             Yet most underutilise their greatest asset: <span className="font-extrabold italic"> the intelligence and lived experience of their own members.</span>
           </p>
 
-          <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
+          <p className="w-[100%] text-[14px] md:text-[22px] font-medium leading-[1.4]">
             While many networks focus heavily on events and programming, only few systematically unlock the
             <span className="font-extrabold italic"> compounding value that exists within the membership itself.</span>
           </p>
 
-          <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
+          <p className="w-[100%] text-[14px] md:text-[22px] font-medium leading-[1.4]">
             Our belief is simple:
             <span className="font-extrabold italic"> The future of high value networks lies not in more activity, but in deeper, more intelligent member-to-member value creation.</span>
           </p>
 
-          <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
+          <p className="w-[100%] text-[14px] md:text-[22px] font-medium leading-[1.4]">
             We are building the world’s most intelligent learning and collaboration ecosystem, one where insight, experience and access are intentionally activated so that
             <span className="font-extrabold italic"> member intelligence compounds over time.</span>
           </p>
 
-          <p className="text-[14px] md:text-[22px] font-medium leading-[1.4]">
-            Our approach focuses on carefully curated networks, each designed to deliver unique value to its members and critically, to each other through structured initiatives, high trust interactions, and thoughtfully deployed AI tools.
+          <p className="w-[100%] text-[14px] md:text-[22px] font-medium leading-[1.4]">
+            Our approach focuses on carefully curated networks, each designed to deliver unique value to its members and critically, to each other through structured initiatives, high trust interactions and thoughtfully deployed AI tools.
           </p>
 
         </div>
@@ -236,27 +236,28 @@ const Websites = () => {
             />
           ))}
         </div> */}
-        <div className="grid grid-cols-1 md:grid-cols-[5fr_4fr] gap-[30px] min-h-[360px] md:min-h-[460px]">
-          {upperCards.map(card => (
-            <WebsiteCard
-              key={card.id}
-              card={card}
-              onClick={handleCardClick}
-            />
-          ))}
-        </div>
+        <div className='flex flex-col items-center gap-[20px] max-w-[1300px]'>
+            <div className="grid grid-cols-1 md:grid-cols-[7fr_4fr] gap-[20px] min-h-[360px] md:min-h-[460px]">
+            {upperCards.map(card => (
+              <WebsiteCard
+                key={card.id}
+                card={card}
+                onClick={handleCardClick}
+              />
+            ))}
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-[24px] min-h-[360px] md:min-h-[550px] ">
-          {lowerCards.map(card => (
-            <WebsiteCard
-              key={card.id}
-              card={card}
-              onClick={handleCardClick}
-            />
-          ))}
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-[20px] min-h-[360px] md:min-h-[550px] ">
+            {lowerCards.map(card => (
+              <WebsiteCard
+                key={card.id}
+                card={card}
+                onClick={handleCardClick}
+              />
+            ))}
+          </div>
 
-        <div
+                  <div
           className="w-full h-[310px] mx-auto rounded-[30px] relative overflow-hidden flex flex-col items-center justify-center text-center group cursor-pointer"
           style={{
             backgroundImage: "url('/asset/card5bg.png')",
@@ -278,6 +279,9 @@ const Websites = () => {
             </div>
           </div>
         </div>
+        </div>
+
+
 
       </div>
       {showPopup && (
