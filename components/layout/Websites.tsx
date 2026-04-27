@@ -270,8 +270,9 @@ const Websites = () => {
           <div className="relative z-10 w-full max-w-[1080px] flex flex-col items-center justify-center">
             <div className="text-left flex flex-col gap-4 items-center">
               <h2 className="text-[32px] leading-[1.1] w-fit font-['Mencken_Std'] font-extrabold">
-                <span className="text-[#656A6B] block">Smart</span>
-                <span className="text-[#C01823] block">Services</span>
+                {/* <span className="text-[#656A6B] block">Smart</span>
+                <span className="text-[#C01823] block">Services</span> */}
+                <Image src={'/asset/logo/smart-services.svg'} alt='Smart Services' width={500} height={500} className='object-contain max-w-[140px]'/>
               </h2>
               <p className="text-white font-inter text-[16px] md:text-[24px] font-semibold leading-[140%] md:leading-[120%] tracking-[-0.5px] md:tracking-[-1.46px] text-center">
                 a dedicated backend team to support networks
