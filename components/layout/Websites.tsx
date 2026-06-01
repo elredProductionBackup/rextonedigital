@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface TitlePart {
   text: string;
@@ -96,7 +97,7 @@ const WebsiteCard = ({
 }) => {
 
   return (
-    <div className={`relative overflow-hidden max-w-[1080px] h-[360px] md:h-full p-[20px] md:p-[40px] rounded-[32px] flex flex-col ${card.alignment} cursor-pointer max-h-[550px]`}
+    <div className={`relative overflow-hidden max-w-[1300px] h-[360px] md:h-full p-[20px] md:p-[40px] rounded-[32px] flex flex-col ${card.alignment} cursor-pointer max-h-[550px]`}
       style={{
         backgroundImage: `${card.overlayGradient ? `${card.overlayGradient},` : ''
           } url('${card.bgImage}')`,
@@ -125,7 +126,7 @@ const WebsiteCard = ({
       <div className={`relative z-10 flex flex-col gap-[20px] h-full ${card.alignment}`}>
         <div className="flex flex-col gap-[16px]">
           {card.logo ? (
-            <div className="relative  w-fit">
+            <div className="relative w-fit">
               <Image
                 src={card.logo}
                 alt="Card Logo"
@@ -173,7 +174,7 @@ const WebsiteCard = ({
 };
 
 const Websites = () => {
-  const upperCards = CARDS_DATA.slice(0, 2);
+  const upperCards = CARDS_DATA.slice(0, 1);
   const lowerCards = CARDS_DATA.slice(2, 4);
   const [showPopup, setShowPopup] = useState(false);
   const [showSmartPopup, setShowSmartPopup] = useState(false);
@@ -187,6 +188,7 @@ const Websites = () => {
       setShowPopup(true);
     }
   };
+
   return (
     <section className="relative w-full pt-0 pb-[100px] px-[20px] overflow-hidden flex flex-col items-center">
 
@@ -236,15 +238,64 @@ const Websites = () => {
             />
           ))}
         </div> */}
-        <div className='flex flex-col items-center gap-[20px] max-w-[1300px]'>
-            <div className="grid grid-cols-1 md:grid-cols-[7fr_4fr] gap-[20px] min-h-[360px] md:min-h-[460px]">
-            {upperCards.map(card => (
+        <div className='flex flex-col items-center gap-[20px] max-w-[1300px] w-[100%]'>
+            <div className="w-full grid grid-cols-1 md:grid-cols-[1fr] gap-[20px] min-h-[360px] md:min-h-[460px]">
+              <div className={`relative overflow-hidden max-w-[1300px] h-[460px] md:h-full p-[20px] md:p-[30px] rounded-[32px] flex flex-col  cursor-pointer max-h-[550px]`}
+                style={{
+                  backgroundImage: ` url('/asset/tpn.webp')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  border: '0.5px solid rgba(182, 182, 182, 1)'
+                }} // onClick={() => onClick(card.id)}
+                >
+                    
+                    <div className='w-full flex justify-between'>
+                      <Image src={'/asset/logo/tpn.svg'} alt='Smart Services' width={500} height={500} className='object-contain max-w-[180px] md:max-w-[238.07px]'/>
+
+                  <Link
+                    href="http://theprofessionals.network/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className='min-h-[55px] max-h-[55px] w-[55px] rounded-[35px] bg-[#fff1] backdrop-blur-[50px] flex items-center justify-center cursor-pointer'>
+                      <Image
+                        src="/asset/arrow.svg"
+                        alt="Link Arrow"
+                        width={25}
+                        height={25}
+                        className="object-contain"
+                      />
+                    </div>
+                  </Link>
+                    </div>
+                    <div className='w-full h-auto text-[white] flex flex-col items-center gap-[70px] pt-[60px] md:pt-[47px]'>
+                      {/* Upper Tagline */}
+                    <div className="w-full md:w-[65%] max-w-[1350px]">
+                      <h2
+                        className="font-inter font-[700] text-[26px] md:text-[39px] leading-[120%] tracking-[-0.97px] md:tracking-[-1.46px] text-center"
+                      >a network for ambitious professionals who are keen to learn from the best academic minds of the world
+                      </h2>
+                    </div>
+
+                    {/* Lower Section Text */}
+                    <div
+                      className="mt-auto md:mt-0 font-[family-name:var(--font-inter-display)] text-center tracking-[-0.5px] font-[400] text-[14px] md:text-[33px] leading-[100%] flex items-center justify-center gap-2 md:gap-4 w-full md:max-w-none"
+                    >
+                      <span className="whitespace-nowrap">Learn. Stay ahead.</span>
+                      <span className="bg-[#C01823] font-bold px-1 md:px-3 py-1 inline-block whitespace-nowrap">
+                        Actionable intelligence
+                      </span>
+                    </div>
+                    </div>
+
+                </div>
+            {/* {upperCards.map(card => (
               <WebsiteCard
                 key={card.id}
                 card={card}
                 onClick={handleCardClick}
               />
-            ))}
+            ))} */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-[20px] min-h-[360px] md:min-h-[550px] ">
