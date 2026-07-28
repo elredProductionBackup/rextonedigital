@@ -239,7 +239,7 @@ const Websites = () => {
           ))}
         </div> */}
         <div className='flex flex-col items-center gap-[20px] max-w-[1300px] w-[100%]'>
-            <div className="w-full grid grid-cols-1 md:grid-cols-[1fr] gap-[20px] min-h-[360px] md:min-h-[460px]">
+            {/* <div className="w-full grid grid-cols-1 md:grid-cols-[1fr] gap-[20px] min-h-[360px] md:min-h-[460px]">
               <div className={`relative overflow-hidden max-w-[1300px] h-[460px] md:h-full p-[20px] md:p-[30px] rounded-[32px] flex flex-col  cursor-pointer max-h-[550px]`}
                 style={{
                   backgroundImage: ` url('/asset/tpn.webp')`,
@@ -269,7 +269,6 @@ const Websites = () => {
                   </Link>
                     </div>
                     <div className='w-full h-auto text-[white] flex flex-col items-center gap-[70px] pt-[60px] md:pt-[47px]'>
-                      {/* Upper Tagline */}
                     <div className="w-full md:w-[65%] max-w-[1350px]">
                       <h2
                         className="font-inter font-[700] text-[26px] md:text-[39px] leading-[120%] tracking-[-0.97px] md:tracking-[-1.46px] text-center"
@@ -277,7 +276,6 @@ const Websites = () => {
                       </h2>
                     </div>
 
-                    {/* Lower Section Text */}
                     <div
                       className="mt-auto md:mt-0 font-[family-name:var(--font-inter-display)] text-center tracking-[-0.5px] font-[400] text-[14px] md:text-[33px] leading-[100%] flex items-center justify-center gap-2 md:gap-4 w-full md:max-w-none"
                     >
@@ -289,6 +287,7 @@ const Websites = () => {
                     </div>
 
                 </div>
+                </div> */}
             {/* {upperCards.map(card => (
               <WebsiteCard
                 key={card.id}
@@ -296,9 +295,8 @@ const Websites = () => {
                 onClick={handleCardClick}
               />
             ))} */}
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-[20px] min-h-[360px] md:min-h-[550px] ">
+          {/* <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-[20px] min-h-[360px] md:min-h-[550px] ">
             {lowerCards.map(card => (
               <WebsiteCard
                 key={card.id}
@@ -306,9 +304,9 @@ const Websites = () => {
                 onClick={handleCardClick}
               />
             ))}
-          </div>
+          </div> */}
 
-                  <div
+                  {/* <div
           className="w-full h-[310px] mx-auto rounded-[30px] relative overflow-hidden flex flex-col items-center justify-center text-center group cursor-pointer"
           style={{
             backgroundImage: "url('/asset/card5bg.png')",
@@ -321,8 +319,6 @@ const Websites = () => {
           <div className="relative z-10 w-full max-w-[1080px] flex flex-col items-center justify-center">
             <div className="text-left flex flex-col gap-4 items-center px-[20px]">
               <h2 className="text-[32px] leading-[1.1] w-fit font-['Mencken_Std'] font-extrabold">
-                {/* <span className="text-[#656A6B] block">Smart</span>
-                <span className="text-[#C01823] block">Services</span> */}
                 <Image src={'/asset/logo/smart-services.svg'} alt='Smart Services' width={500} height={500} className='object-contain max-w-[140px]'/>
               </h2>
               <p className="text-white font-inter text-[16px] md:text-[24px] font-semibold leading-[140%] md:leading-[120%] tracking-[-0.5px] md:tracking-[-1.46px] text-center ">
@@ -330,7 +326,7 @@ const Websites = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         </div>
 
 
