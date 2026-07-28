@@ -228,7 +228,6 @@ const Websites = () => {
           </p>
 
         </div>
-        {/* 🔥 TOP ROW (2/5 / 3/5) */}
         {/* <div className="grid grid-cols-[4fr_5fr] gap-[30px] h-[460px]">
           {upperCards.map(card => (
             <WebsiteCard
