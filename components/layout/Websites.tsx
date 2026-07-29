@@ -238,7 +238,7 @@ const Websites = () => {
           ))}
         </div> */}
         <div className='flex flex-col items-center gap-[20px] max-w-[1300px] w-[100%]'>
-            {/* <div className="w-full grid grid-cols-1 md:grid-cols-[1fr] gap-[20px] min-h-[360px] md:min-h-[460px]">
+            <div className="w-full grid grid-cols-1 md:grid-cols-[1fr] gap-[20px] min-h-[360px] md:min-h-[460px]">
               <div className={`relative overflow-hidden max-w-[1300px] h-[460px] md:h-full p-[20px] md:p-[30px] rounded-[32px] flex flex-col  cursor-pointer max-h-[550px]`}
                 style={{
                   backgroundImage: ` url('/asset/tpn.webp')`,
@@ -249,7 +249,7 @@ const Websites = () => {
                 >
                     
                     <div className='w-full flex justify-between'>
-                      <Image src={'/asset/logo/tpn.svg'} alt='Smart Services' width={500} height={500} className='object-contain max-w-[180px] md:max-w-[238.07px]'/>
+                      <Image src={'/tpn-logo.svg'} alt='Smart Services' width={500} height={500} className='object-contain max-w-[180px] md:max-w-[238.07px]'/>
 
                   <Link
                     href="http://theprofessionals.network/"
@@ -286,7 +286,7 @@ const Websites = () => {
                     </div>
 
                 </div>
-                </div> */}
+                </div>
             {/* {upperCards.map(card => (
               <WebsiteCard
                 key={card.id}
