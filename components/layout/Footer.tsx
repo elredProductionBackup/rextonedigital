@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="w-full h-auto md:h-[330px] bg-[#F2F2F2] px-[20px] md:px-[60px] py-[30px] md:py-[80px] flex flex-col gap-[30px] md:gap-[50px] items-center justify-center">
 
   <div className="w-full max-w-[1536px] flex items-center justify-between">
-    
+
     <Link href="/" className="flex items-center justify-center w-[100px] h-[14px] md:w-[220px] md:h-[42px] overflow-hidden">
       <Image
         src="/asset/theNetwork.svg"
@@ -20,8 +20,8 @@ const Footer = () => {
     <div className="flex items-center gap-6 md:gap-12 text-[#333333] font-inter font-medium text-[10px] md:text-[20px]">
   <a href="/why" className="hover:text-[#C01823] transition-colors">Why</a>
 
-  <a 
-    href="mailto:info@rextonedigital.com" 
+  <a
+    href="mailto:info@rextonedigital.com"
     className="hover:text-[#C01823] transition-colors"
   >
     Contact
@@ -32,12 +32,20 @@ const Footer = () => {
 
   <hr className="border-t border-[#333333] w-full opacity-20" />
 
-  <div className="w-full max-w-[1536px] flex items-center justify-between text-[#333333] font-inter font-medium text-[10px] md:text-[20px] leading-[14px] md:leading-[28px]">
+  <div className="w-full max-w-[1536px] flex flex-col-reverse gap-[16px] md:flex-row md:items-center md:justify-between text-[#333333] font-inter font-medium text-[10px] md:text-[20px] leading-[14px] md:leading-[28px]">
 
     <p>© 2026 Rex-Tone Digital Private Limited. All Rights Reserved</p>
 
-    <div className="flex items-center gap-4">
-      {/* future links */}
+    <div className="flex flex-wrap items-center gap-x-[16px] gap-y-[8px] md:gap-x-[32px]">
+      <Link href="/privacy-policy" className="hover:text-[#C01823] transition-colors">
+        Privacy Policy
+      </Link>
+      <Link href="/community-guidelines" className="hover:text-[#C01823] transition-colors">
+        Community Guidelines
+      </Link>
+      <Link href="/terms-of-use" className="hover:text-[#C01823] transition-colors">
+        Terms of Use
+      </Link>
     </div>
 
   </div>
