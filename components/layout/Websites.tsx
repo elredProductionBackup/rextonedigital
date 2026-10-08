@@ -54,7 +54,7 @@ const CARDS: NetworkCard[] = [
         alt="Privé"
         width={500}
         height={500}
-        className="object-contain object-left w-auto h-auto max-w-[70px] md:max-w-[220px]"
+        className="object-contain object-left w-auto h-auto max-w-[100px] md:max-w-[220px]"
       />
     ),
     headline: 'Privé is an enterprise network designed to elevate good teams into great ones.',
@@ -124,7 +124,7 @@ const NetworkCardView = ({ card }: { card: NetworkCard }) => {
             sizes="(max-width: 1300px) 100vw, 1300px"
             onLoad={() => setImgLoaded(true)}
             onError={() => setImgLoaded(false)}
-            className={`object-cover transition-[opacity,transform] duration-700 ease-out group-hover:scale-[1.04] ${showPhoto ? 'opacity-100' : 'opacity-0'}`}
+            className={`nc-photo object-cover ${showPhoto ? 'opacity-100' : 'opacity-0'}`}
           />
         )}
 
@@ -241,9 +241,19 @@ const Websites = () => (
         15%  { opacity: 1; }
         100% { transform: skewX(-18deg) translateX(350%); opacity: 0; }
       }
+      .nc-photo {
+        transform: scale(1) translateZ(0);
+        backface-visibility: hidden;
+        will-change: transform;
+        transition:
+          opacity 700ms ease-out,
+          transform 1800ms cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .nc-card:hover .nc-photo { transform: scale(1.05) translateZ(0); }
       @media (prefers-reduced-motion: reduce) {
         .nc-card, .nc-card:hover { transform: none; transition: none; }
         .nc-card:hover .nc-sheen { animation: none; }
+        .nc-photo, .nc-card:hover .nc-photo { transform: none; transition: opacity 700ms ease-out; }
       }
     `}</style>
 
