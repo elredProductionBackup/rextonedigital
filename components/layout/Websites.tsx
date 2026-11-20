@@ -31,7 +31,7 @@ const CARDS: NetworkCard[] = [
     label: 'Privé',
     href: 'https://theprive.network',
     theme: 'light',
-    bgImage: '/asset/bg-prive.webp',
+    bgImage: '/asset/prive-banner.webp',
     background: [
       // pearl light pouring in from the top-left
       'radial-gradient(70% 85% at 0% 0%, rgba(255, 253, 246, 0.95) 0%, rgba(255, 253, 246, 0) 60%)',
@@ -44,7 +44,7 @@ const CARDS: NetworkCard[] = [
       // champagne base
       'linear-gradient(160deg, #fcf7ea 0%, #f5e7c4 48%, #ebd29a 100%)',
     ].join(','),
-    imageOverlay: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))',
+    imageOverlay: 'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))',
     hoverGlow: 'radial-gradient(55% 65% at 85% 90%, rgba(255, 210, 120, 0.3) 0%, rgba(255, 210, 120, 0) 70%)',
     borderColor: 'rgba(205, 165, 85, 0.55)',
     dotColor: 'rgba(150, 108, 32, 0.14)',
@@ -57,20 +57,21 @@ const CARDS: NetworkCard[] = [
         className="object-contain object-left w-auto h-auto max-w-[100px] md:max-w-[220px]"
       />
     ),
-    headline: 'Privé is an enterprise network designed to elevate good teams into great ones.',
+    headline: '',
   },
   {
     id: 'tpn',
     label: 'The Professionals Network',
     href: 'http://theprofessionals.network/',
-    theme: 'dark',
+   theme: 'dark',
+    bgImage: '/asset/tpn-banner.webp',
     background: [
       'radial-gradient(75% 95% at 100% 100%, rgba(150, 18, 30, 0.6) 0%, rgba(150, 18, 30, 0) 65%)',
       'radial-gradient(45% 55% at 88% 96%, rgba(192, 24, 35, 0.35) 0%, rgba(192, 24, 35, 0) 70%)',
       'radial-gradient(60% 70% at 0% 0%, rgba(40, 38, 46, 0.6) 0%, rgba(40, 38, 46, 0) 70%)',
       'linear-gradient(160deg, #141317 0%, #17141a 48%, #22121a 100%)',
     ].join(','),
-    imageOverlay: 'linear-gradient(160deg, rgba(20, 19, 23, 0.85), rgba(34, 18, 26, 0.8))',
+    imageOverlay: '',
     hoverGlow: 'radial-gradient(55% 65% at 85% 90%, rgba(192, 24, 35, 0.3) 0%, rgba(192, 24, 35, 0) 70%)',
     borderColor: 'rgba(120, 40, 48, 0.55)',
     dotColor: 'rgba(255, 255, 255, 0.09)',
@@ -83,13 +84,13 @@ const CARDS: NetworkCard[] = [
         className="object-contain object-left w-auto h-auto max-w-[170px] md:max-w-[220px]"
       />
     ),
-    headline: 'a network for ambitious professionals who are keen to learn from the best academic minds of the world',
+    headline: '',
     tagline: (
       <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 font-inter text-[14px] md:text-[24px] leading-none tracking-[-0.4px]">
-        <span className="whitespace-nowrap text-white/90">Learn. Stay ahead.</span>
+        {/* <span className="whitespace-nowrap text-white/90">Learn. Stay ahead.</span>
         <span className="whitespace-nowrap bg-[#C01823] text-white font-semibold px-2 md:px-3 py-1 md:py-1.5">
           Actionable intelligence
-        </span>
+        </span> */}
       </div>
     ),
   },
